@@ -32,12 +32,17 @@ Il computer deve generare 16 numeri casuali nello stesso range della difficoltà
 In seguito l'utente clicca su una cella: se il numero è presente nella lista dei numeri generati - abbiamo calpestato una bomba - la cella si colora di rosso e la partita termina. Altrimenti la cella cliccata si colora di azzurro e l'utente può continuare a cliccare sulle altre celle.
 La partita termina quando il giocatore clicca su una bomba o quando raggiunge il numero massimo possibile di numeri consentiti (ovvero quando ha rivelato tutte le celle che non sono bombe).
 Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha cliccato su una cella che non era una bomba.
+# SUPERBONUS
+## 1
+Quando si clicca su una bomba e finisce la partita, evitare che si possa cliccare su altre celle.
+## 2
+Quando si clicca su una bomba e finisce la partita, il software scopre tutte le bombe nascoste
 
-# Flow (new)
+# Flow (new) + SUPERBONUS (1) + SUPERBONUS (2)
 .........
 - Recupero dal DOM l'elemento h3.score
 - Creo una costante BOMBS e le assegno il valore numerico 16
-- Creo una variabile flag impostata su true: il gioco è interattivo
+- Creo una variabile flag impostata su true: il gioco è interattivo // SUPERBONUS 1
 - Dichiaro un array vuoto (bombsArr)
 - Dichiaro una variabile per il punteggio ("score") e la inizializzo a 0
 - Creo una funzione "bombsGenerator" con parametro "cells" (numero di celle)
@@ -49,19 +54,19 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
                 - => inserisco il numero random nell'array
         - Stampo in console l'array per controllare quali celle presenteranno la bomba
 .........
-- Creo una funzione con ritorno per il Game Over
+- Creo una funzione con ritorno per il Game Over // SUPERBONUS 1
     - Istruzioni:
         - Imposto la flag su false: il gioco non è più interattivo
         - Restituisco la variabile flag
 - All'inizio della funzione newGame() creata nel primo progetto
-    - Inizializzo la variabile flag su true a ogni inizio partita
+    - Inizializzo la variabile flag su true a ogni inizio partita // SUPERBONUS 1
     - Imposto il punteggio a 0
     - Aggiungo come base per ogni start la variabile "score" all'h3.score
     - ...........
     - Invoco la funzione bombsGenerator e, in questo caso, passo come parametro il valore numerico 100 (100 celle per l'esercizio base)
     - All'interno del ciclo for con k < 100 come condizione di uscita
         - Al click del quadrato
-            - ? SE la variabile flag è su true
+            - ? SE la variabile flag è su true // SUPERBONUS 1
                 - ? SE l'array delle bombe include la cella clickata
                     - => aggiungo all'elemento clickato la classe "clicked-red"
                     - chiamo la funzione di Game Over

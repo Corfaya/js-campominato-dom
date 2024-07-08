@@ -38,12 +38,3 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
             - Aggiungo in coda l'elemento creato all'interno del contenitore recuperato dal DOM
 
 - Aggiungo l'evento click al bottone e invoco la funzione newGame
-
-# TRACCIA SUPERBONUS (new)
-## 1
-Quando si clicca su una bomba e finisce la partita, evitare che si possa cliccare su altre celle.
-
-## 2
-Quando si clicca su una bomba e finisce la partita, il software scopre tutte le bombe nascoste
-
-# Flow SUPERBONUS (new)
