@@ -91,14 +91,26 @@ main {
     cursor: pointer;
 }
 
-.clicked-azure {
+.square:hover {
+    background-color: transparent;
+}
+
+.clicked-violet {
     background-color: #837bbb;
     color: #fff;
+}
+
+.clicked-violet:hover {
+    background-color: #847bbbb7;
 }
 
 .clicked-red {
     background-color: #d66388;
     color: #fff;
+}
+
+.clicked-red {
+    background-color: #d66387a9;
 }
 
 .easy-squares {
