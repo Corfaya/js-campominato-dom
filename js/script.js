@@ -34,9 +34,14 @@ function newGame() {
     for (let k = 0; k < 100; k++) {
         square = createDivSquare();
         square.addEventListener("click", function() {
-            if ((k+1) === arrBombs)
+            // if it's a bomb
+            if (bombsArr.includes(k + 1)) {
+                this.classList.add("clicked-red")
+                console.log("Hai clickato una bomba")
+            } else {
             this.classList.add("clicked-azure")
             console.log("Hai clickato su " + (k + 1))
+            }
         })
         square.innerText = k + 1
         grid.append(square)
