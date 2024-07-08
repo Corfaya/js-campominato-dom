@@ -88,10 +88,7 @@ function newGame() {
     square = createDivSquare(squareClass);
     square.addEventListener("click", function () {
       // if gameOn is true and the cell is not clicked
-      if (
-        gameOn &&
-        !this.classList.contains("clicked-azure") &&
-        !this.classList.contains("clicked-red")
+      if (gameOn && !this.classList.contains("clicked-azure") && !this.classList.contains("clicked-red")
       ) {
         // if it's a bomb
         if (bombsArr.includes(k + 1)) {
