@@ -8,6 +8,8 @@ const BOMBS = 16;
 let gameOn = true;
 // empty array for bombs
 let bombsArr = [];
+// score variable
+let score = 0
 
 // click event on btn
 btn.addEventListener("click", newGame);

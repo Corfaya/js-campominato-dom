@@ -38,6 +38,7 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
 - Creo una costante BOMBS e le assegno il valore numerico 16
 - Creo una variabile flag impostata su true: il gioco è interattivo
 - Dichiaro un array vuoto (bombsArr)
+- Dichiaro una variabile per il punteggio ("score") e la inizializzo a 0
 - Creo una funzione "bombsGenerator" con parametro "cells" (numero di celle)
     - Istruzioni:
         - Richiamo la variabile globale (bombsArr) e la svuoto a ogni nuovo ciclo
