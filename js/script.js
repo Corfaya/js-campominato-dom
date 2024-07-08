@@ -46,7 +46,7 @@ function gameOver() {
 function newGame() {
   gameOn = true;
   score = 0;
-  points.innerHTML += `: ${score}`
+  points.innerHTML = "Punteggio: " + score
   grid.innerHTML = "";
   bombsGenerator(100); //function called
   let square;
@@ -63,6 +63,7 @@ function newGame() {
         } else {
           this.classList.add("clicked-azure");
           console.log("Hai clickato su " + (k + 1));
+          score++
         }
       } else {
         console.log("Il gioco non è attivo. Ricomincia da capo");
