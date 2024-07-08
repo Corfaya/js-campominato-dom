@@ -2,9 +2,18 @@
 const grid = document.getElementById("grid")
 const btn = document.getElementById("play")
 
-// number of bombs and bombs generator function
+// number of bombs
 const BOMBS = 16
+// Global flag variable
+let gameOn = true
+// empty array for bombs
 let bombsArr = []
+
+// click event on btn
+btn.addEventListener("click", newGame)
+
+// ===== FUNCTIONS =====
+// bombs generation function
 function bombsGenerator(cells) {
     bombsArr = [] // array reset
     while(bombsArr.length < BOMBS) {
@@ -17,16 +26,14 @@ function bombsGenerator(cells) {
     console.log(bombsArr)
 }
 
-// click event on btn
-btn.addEventListener("click", newGame)
-
-// Function
+// div creation function
 function createDivSquare() {
     let currentElement = document.createElement("div")
     currentElement.classList.add("square")
     return currentElement;
 }
 
+// new game function
 function newGame() {
     grid.innerHTML = ""
     bombsGenerator(100) //function called
@@ -39,8 +46,8 @@ function newGame() {
                 this.classList.add("clicked-red")
                 console.log("Hai clickato una bomba")
             } else {
-            this.classList.add("clicked-azure")
-            console.log("Hai clickato su " + (k + 1))
+                this.classList.add("clicked-azure")
+                console.log("Hai clickato su " + (k + 1))
             }
         })
         square.innerText = k + 1
