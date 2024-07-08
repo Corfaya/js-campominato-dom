@@ -54,10 +54,16 @@ Quando si clicca su una bomba e finisce la partita, il software scopre tutte le 
                 - => inserisco il numero random nell'array
         - Stampo in console l'array per controllare quali celle presenteranno la bomba
 .........
-- Creo una funzione con ritorno per il Game Over // SUPERBONUS 1
+- Creo una funzione che riveli tutte le bombe // SUPERBONUS 2
+    - Istruzioni:
+        - Recupero tutti i div creati restituendoli in una nodelist
+        - Creo un ciclo per iterare le bombe contenute nell'array percorrendo il numero totale dei div.square
+            - ? SE al numero dei div corrisponde una bomba
+                - => rendila visibile aggiungendo il colore rosso
+- Creo una funzione per il Game Over // SUPERBONUS 1
     - Istruzioni:
         - Imposto la flag su false: il gioco non è più interattivo
-        - Restituisco la variabile flag
+        - Invoco la funzione per rivelare tutte le altre bombe
 - All'inizio della funzione newGame() creata nel primo progetto
     - Inizializzo la variabile flag su true a ogni inizio partita // SUPERBONUS 1
     - Imposto il punteggio a 0
