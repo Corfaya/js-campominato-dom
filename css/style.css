@@ -49,3 +49,7 @@ header {
 .clicked-azure {
     background-color: #069AF3;
 }
+
+.clicked-red {
+    background-color: red;
+}
