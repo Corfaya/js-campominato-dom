@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #7fffd4;
+    background-color: #ebe9dc;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -84,18 +84,21 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #7fffd4;
+    background-color: #DDEAEB;
     border: 1px solid #000;
     color: #000;
+    font-weight: 700;
     cursor: pointer;
 }
 
 .clicked-azure {
-    background-color: #069AF3;
+    background-color: #837bbb;
+    color: #fff;
 }
 
 .clicked-red {
-    background-color: red;
+    background-color: #d66388;
+    color: #fff;
 }
 
 .easy-squares {
