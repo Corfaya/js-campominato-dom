@@ -2,6 +2,12 @@
 const grid = document.getElementById("grid")
 const btn = document.getElementById("play")
 
+// number of bombs and bombs generator function
+const BOMBS = 16
+function bombsGenerator(cells) {
+    
+}
+
 // click event on btn
 btn.addEventListener("click", newGame)
 
