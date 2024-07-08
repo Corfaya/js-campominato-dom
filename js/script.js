@@ -1,6 +1,7 @@
 // elements recovery
 const grid = document.getElementById("grid");
 const btn = document.getElementById("play");
+const points = document.querySelector(".score")
 
 // number of bombs
 const BOMBS = 16;

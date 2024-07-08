@@ -35,6 +35,7 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
 
 # Flow (new)
 .........
+- Recupero dal DOM l'elemento h3.score
 - Creo una costante BOMBS e le assegno il valore numerico 16
 - Creo una variabile flag impostata su true: il gioco è interattivo
 - Dichiaro un array vuoto (bombsArr)
