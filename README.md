@@ -56,6 +56,7 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
         - Restituisco la variabile flag
 - All'inizio della funzione newGame() creata nel primo progetto
     - Inizializzo la variabile flag su true a ogni inizio partita
+    - Imposto il punteggio a 0
     - ...........
     - Invoco la funzione bombsGenerator e, in questo caso, passo come parametro il valore numerico 100 (100 celle per l'esercizio base)
     - All'interno del ciclo for con k < 100 come condizione di uscita

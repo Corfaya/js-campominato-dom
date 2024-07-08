@@ -1,7 +1,7 @@
 // elements recovery
 const grid = document.getElementById("grid");
 const btn = document.getElementById("play");
-const points = document.querySelector(".score")
+const points = document.querySelector(".score");
 points.innerHTML += "00000";
 
 // number of bombs
@@ -11,7 +11,7 @@ let gameOn = true;
 // empty array for bombs
 let bombsArr = [];
 // score variable
-let score = 0
+let score = 0;
 
 // click event on btn
 btn.addEventListener("click", newGame);
@@ -45,7 +45,8 @@ function gameOver() {
 
 // new game function
 function newGame() {
-    gameOn = true
+  gameOn = true;
+  score = 0;
   grid.innerHTML = "";
   bombsGenerator(100); //function called
   let square;
