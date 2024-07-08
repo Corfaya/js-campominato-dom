@@ -39,6 +39,7 @@ function createDivSquare() {
 // game over function
 function gameOver() {
   gameOn = false;
+  alert("Il tuo punteggio è di " + score)
   return gameOn;
 }
 
