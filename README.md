@@ -65,9 +65,12 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
                 - ? SE l'array delle bombe include la cella clickata
                     - => aggiungo all'elemento clickato la classe "clicked-red"
                     - chiamo la funzione di Game Over
+                    - Stampo sul DOM il punteggio
                     - Stampo "Hai pestato una bomba"
                 - : ALTRIMENTI
                     - => aggiungo all'elemento clickato la classe "clicked-azure"
+                    - Incremento di 1 lo score
+                    - Stampo sul DOM il punteggio
                     - Stampo su console "Hai clickato su " + (numero cella)
             - : ALTRIMENTI
                 - Stampo su console "Il gioco non è attivo. Ricomincia da capo"
