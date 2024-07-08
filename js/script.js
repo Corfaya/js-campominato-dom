@@ -2,9 +2,6 @@
 const grid = document.getElementById("grid");
 const btn = document.getElementById("play");
 const points = document.querySelector(".score");
-// Points
-let tot = points.innerHTML += 0;
-console.log(tot)
 
 // number of bombs
 const BOMBS = 16;
@@ -14,6 +11,8 @@ let gameOn = true;
 let bombsArr = [];
 // score variable
 let score = 0;
+// Points
+points.innerHTML += score
 
 // click event on btn
 btn.addEventListener("click", newGame);
