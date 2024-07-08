@@ -65,4 +65,4 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
                     - => aggiungo all'elemento clickato la classe "clicked-azure"
                     - Stampo su console "Hai clickato su " + (numero cella)
             - : ALTRIMENTI
-                - Stampo su copnsole "Il gioco non è attivo. Ricomincia da capo"
+                - Stampo su console "Il gioco non è attivo. Ricomincia da capo"
