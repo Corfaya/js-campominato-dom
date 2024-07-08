@@ -47,6 +47,9 @@ function gameOver() {
 // reveal all bombs function
 function revealBombs () {
     let squares = document.querySelectorAll(".square")
+    for(let k = 0; k < squares.length; k++) {
+        
+    }
 }
 
 // new game function
