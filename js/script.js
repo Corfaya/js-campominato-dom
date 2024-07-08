@@ -39,7 +39,6 @@ function createDivSquare() {
 // game over function
 function gameOver() {
   gameOn = false;
-  alert("Il tuo punteggio è di " + score)
   return gameOn;
 }
 
@@ -54,24 +53,25 @@ function newGame() {
   for (let k = 0; k < 100; k++) {
     square = createDivSquare();
     square.addEventListener("click", function () {
-      // if gameOn is true
-      if (gameOn) {
+      // if gameOn is true and the cell is not clicked
+      if (gameOn && !this.classList.add("clicked-azure")) {
+        this.classList.add("clicked-azure");
         // if it's a bomb
         if (bombsArr.includes(k + 1)) {
           this.classList.add("clicked-red");
           gameOver();
           points.innerHTML = "Punteggio: " + score
           console.log("Hai pestato una bomba");
-        } else {
-          this.classList.add("clicked-azure");
-          score++
-          points.innerHTML = "Punteggio: " + score
-          console.log("Hai clickato su " + (k + 1));
+        } else {                
+                score++
+                points.innerHTML = "Punteggio: " + score
+                console.log("Hai clickato su " + (k + 1));
+            }
         }
-      } else {
+      else {
         console.log("Il gioco non è attivo. Ricomincia da capo");
       }
-    });
+});
     square.innerText = k + 1;
     grid.append(square);
   }
