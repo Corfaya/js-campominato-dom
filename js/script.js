@@ -8,6 +8,9 @@ function bombsGenerator(cells) {
     let bombsArr = []
     while(bombsArr.length < BOMBS) {
         let random = Math.floor(Math.random() * cells) + 1;
+        if(!bombsArr.includes(random)){
+            bombsArr.push(random)
+        }
     }
 
 }
