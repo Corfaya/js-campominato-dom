@@ -3,6 +3,8 @@ const grid = document.getElementById("grid");
 const btn = document.getElementById("play");
 const level = document.getElementById("level");
 const points = document.querySelector(".score");
+const winScreen = document.querySelector(".win")
+const defeatScreen = document.querySelector(".defeat")
 
 // number of bombs
 const BOMBS = 16;
@@ -42,6 +44,7 @@ function createDivSquare(diff) {
 function gameOver() {
   gameOn = false;
   revealBombs();
+  defeatScreen.classList.remove("d-none")
 }
 
 // reveal all bombs function
@@ -57,6 +60,8 @@ function revealBombs() {
 
 // new game function
 function newGame() {
+    winScreen.classList.add("d-none")
+    defeatScreen.classList.add("d-none")
   grid.innerHTML = "";
   gameOn = true;
   score = 0;
@@ -73,6 +78,9 @@ function newGame() {
   } else if (levelSelection == 3) {
     squareLength = 49;
     squareClass = "hard-squares";
+  } else {
+    squareLength = 100;
+    squareClass = "easy-squares";
   }
   bombsGenerator(squareLength);
   let square;
@@ -98,6 +106,7 @@ function newGame() {
           console.log("Hai clickato su " + (k + 1));
           if (score == squareLength - BOMBS) {
             console.log("YOU WIN")
+            winScreen.classList.remove('d-none');
           }
         }
       } else {

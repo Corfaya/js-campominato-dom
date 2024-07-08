@@ -41,6 +41,7 @@ Quando si clicca su una bomba e finisce la partita, il software scopre tutte le 
 # Flow (new) + SUPERBONUS (1) + SUPERBONUS (2)
 .........
 - Recupero dal DOM l'elemento h3.score
+- Recupero dal DOM le schermate di vittoria e di sconfitta
 - Creo una costante BOMBS e le assegno il valore numerico 16
 - Creo una variabile flag impostata su true: il gioco è interattivo // SUPERBONUS 1
 - Dichiaro un array vuoto (bombsArr)
@@ -65,7 +66,9 @@ Quando si clicca su una bomba e finisce la partita, il software scopre tutte le 
     - Istruzioni:
         - Imposto la flag su false: il gioco non è più interattivo
         - Invoco la funzione per rivelare tutte le altre bombe
+        - Aggiungo la schermata di sconfitta
 - All'inizio della funzione newGame() creata nel primo progetto
+    - Aggiungo la classe .d-none alle schermate di sconfitta e di vittoria
     - Inizializzo la variabile flag su true a ogni inizio partita // SUPERBONUS 1
     - Imposto il punteggio a 0
     - Aggiungo come base per ogni start la variabile "score" all'h3.score
@@ -84,5 +87,7 @@ Quando si clicca su una bomba e finisce la partita, il software scopre tutte le 
                     - Incremento di 1 lo score
                     - Stampo sul DOM il punteggio
                     - Stampo su console "Hai clickato su " + (numero cella)
+                    - ? SE il punteggio è uguale alla lunghezza delle caselle meno il numero delle bombe
+                        - => Aggiungo la schermata di vittoria
             - : ALTRIMENTI
                 - Stampo su console "Il gioco non è attivo. Ricomincia da capo"
