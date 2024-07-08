@@ -59,11 +59,13 @@ function newGame() {
         if (bombsArr.includes(k + 1)) {
           this.classList.add("clicked-red");
           gameOver();
+          points.innerHTML = "Punteggio: " + score
           console.log("Hai pestato una bomba");
         } else {
           this.classList.add("clicked-azure");
-          console.log("Hai clickato su " + (k + 1));
           score++
+          points.innerHTML = "Punteggio: " + score
+          console.log("Hai clickato su " + (k + 1));
         }
       } else {
         console.log("Il gioco non è attivo. Ricomincia da capo");
