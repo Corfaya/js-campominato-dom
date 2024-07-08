@@ -33,6 +33,12 @@ function createDivSquare() {
     return currentElement;
 }
 
+// game over function
+function gameOver() {
+    gameOn = false
+    return gameOn
+}
+
 // new game function
 function newGame() {
     grid.innerHTML = ""
