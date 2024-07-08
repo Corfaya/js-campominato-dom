@@ -2,7 +2,9 @@
 const grid = document.getElementById("grid");
 const btn = document.getElementById("play");
 const points = document.querySelector(".score");
-points.innerHTML += "00000";
+// Points
+let tot = points.innerHTML += 0;
+console.log(tot)
 
 // number of bombs
 const BOMBS = 16;
