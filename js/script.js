@@ -41,7 +41,12 @@ function createDivSquare(diff) {
 // game over function
 function gameOver() {
   gameOn = false;
-//   return gameOn;
+  revealBombs();
+}
+
+// reveal all bombs function
+function revealBombs () {
+    
 }
 
 // new game function
@@ -75,7 +80,7 @@ function newGame() {
           this.classList.add("clicked-red");
           gameOver();
           points.innerHTML = "Punteggio: " + score;
-          console.log("Hai pestato una bomba");
+          console.log("Hai pestato una bomba. Ricomincia");
         } else {
             this.classList.add("clicked-azure");
           score++;
@@ -83,10 +88,11 @@ function newGame() {
           console.log("Hai clickato su " + (k + 1));
         }
       } else {
-        console.log("Il gioco non è attivo. Ricomincia da capo");
+        console.log("Non puoi fare click sulla stessa cella.");
       }
     });
     square.innerText = k + 1;
     grid.append(square);
   }
 }
+
