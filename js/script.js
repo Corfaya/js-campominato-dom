@@ -46,7 +46,7 @@ function gameOver() {
 
 // reveal all bombs function
 function revealBombs () {
-    
+    let squares = document.querySelectorAll(".square")
 }
 
 // new game function
