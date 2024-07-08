@@ -34,3 +34,14 @@ La partita termina quando il giocatore clicca su una bomba o quando raggiunge il
 Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha cliccato su una cella che non era una bomba.
 
 # Flow (new)
+- Creo una costante BOMBS e le assegno il valore numerico 16
+- Creo una funzione "bombsGenerator" con parametro "cells" (numero di celle)
+    - Istruzioni:
+        - Dichiaro un array vuoto (bombsArr)
+        - Ciclo l'array finché non contiene lo stesso numero presente in BOMBS
+            - Prendo un numero randomico da 1 al numero delle celle e lo salvo nella variabile "random"
+            - ? il numero random non è già incluso nell'array
+                - => inserisco il numero random nell'array
+        - Stampo in console l'array per controllare quali celle presenteranno la bomba
+- All'inizio della funzione newGame() creata nel primo progetto
+    - Invoco la funzione bombsGenerator e, in questo caso, passo come parametro il valore numerico 100 (100 celle per l'esercizio base)
