@@ -41,6 +41,7 @@ function gameOver() {
 
 // new game function
 function newGame() {
+    gameOn = true
   grid.innerHTML = "";
   bombsGenerator(100); //function called
   let square;
