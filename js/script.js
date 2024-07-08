@@ -1,6 +1,7 @@
 // elements recovery
 const grid = document.getElementById("grid");
 const btn = document.getElementById("play");
+const level = document.getElementById("level");
 const points = document.querySelector(".score");
 
 // number of bombs
@@ -30,48 +31,61 @@ function bombsGenerator(cells) {
 }
 
 // div creation function
-function createDivSquare() {
+function createDivSquare(diff) {
   let currentElement = document.createElement("div");
   currentElement.classList.add("square");
+  currentElement.classList.add(diff);
   return currentElement;
 }
 
 // game over function
 function gameOver() {
   gameOn = false;
-  return gameOn;
+//   return gameOn;
 }
 
 // new game function
 function newGame() {
+  grid.innerHTML = "";
   gameOn = true;
   score = 0;
-  points.innerHTML = "Punteggio: " + score
-  grid.innerHTML = "";
-  bombsGenerator(100); //function called
+  points.innerHTML = "Punteggio: " + score;
+  let levelSelection = level.value;
+  let squareLength;
+  let squareClass;
+  if (levelSelection == 1) {
+    squareLength = 100
+    squareClass = "easy-squares"
+} else if (levelSelection == 2) {
+    squareLength = 81
+    squareClass = "medium-squares"
+} else if (levelSelection == 3) {
+    squareLength = 49
+    squareClass = "hard-squares"
+}
+  bombsGenerator(squareLength);
   let square;
-  for (let k = 0; k < 100; k++) {
-    square = createDivSquare();
+  for (let k = 0; k < squareLength; k++) {
+    square = createDivSquare(squareClass);
     square.addEventListener("click", function () {
       // if gameOn is true and the cell is not clicked
-      if (gameOn && !this.classList.add("clicked-azure")) {
-        this.classList.add("clicked-azure");
+      if (gameOn && !this.classList.contains("clicked-azure") && !this.classList.contains("clicked-red")) {
         // if it's a bomb
         if (bombsArr.includes(k + 1)) {
           this.classList.add("clicked-red");
           gameOver();
-          points.innerHTML = "Punteggio: " + score
+          points.innerHTML = "Punteggio: " + score;
           console.log("Hai pestato una bomba");
-        } else {                
-                score++
-                points.innerHTML = "Punteggio: " + score
-                console.log("Hai clickato su " + (k + 1));
-            }
+        } else {
+            this.classList.add("clicked-azure");
+          score++;
+          points.innerHTML = "Punteggio: " + score;
+          console.log("Hai clickato su " + (k + 1));
         }
-      else {
+      } else {
         console.log("Il gioco non è attivo. Ricomincia da capo");
       }
-});
+    });
     square.innerText = k + 1;
     grid.append(square);
   }

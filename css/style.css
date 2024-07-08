@@ -17,16 +17,21 @@ header {
     box-shadow: 0px 2px rgb(188, 185, 185);
 }
 
-#play {
+#play, #level {
     padding: 5px 30px;
     border: 1px solid #000;
     border-radius: 10px;
     cursor: pointer;
 }
 
+#level {
+    padding: 5px 10px;
+    background-color: #F0F0F0;
+}
+
 #grid {
-    max-width: 800px;
-    max-height: 800px;
+    max-width: 600px;
+    max-height: 600px;
     margin: 0 auto;
     padding: 80px 0;
     display: flex;
@@ -36,7 +41,6 @@ header {
 }
 
 .square {
-    width: calc(100% / 10);
     aspect-ratio: 1 / 1;
     display: flex;
     justify-content: center;
@@ -53,6 +57,18 @@ header {
 
 .clicked-red {
     background-color: red;
+}
+
+.easy-squares {
+    width: calc(100% / 10);
+}
+
+.medium-squares {
+    width: calc(100% / 9);
+}
+
+.hard-squares {
+    width: calc(100% / 7)
 }
 
 h3 {
