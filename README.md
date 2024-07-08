@@ -34,7 +34,9 @@ La partita termina quando il giocatore clicca su una bomba o quando raggiunge il
 Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha cliccato su una cella che non era una bomba.
 
 # Flow (new)
+.........
 - Creo una costante BOMBS e le assegno il valore numerico 16
+- Creo una variabile flag impostata su true: il gioco è interattivo
 - Dichiaro un array vuoto (bombsArr)
 - Creo una funzione "bombsGenerator" con parametro "cells" (numero di celle)
     - Istruzioni:
@@ -44,11 +46,24 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
             - ? SE il numero random non è già incluso nell'array
                 - => inserisco il numero random nell'array
         - Stampo in console l'array per controllare quali celle presenteranno la bomba
+.........
+- Creo una funzione con ritorno per il Game Over
+    - Istruzioni:
+        - Imposto la flag su false: il gioco non è più interattivo
+        - Restituisco la variabile flag
 - All'inizio della funzione newGame() creata nel primo progetto
+    - Reimposto la variabile flag su true
+    - ...........
     - Invoco la funzione bombsGenerator e, in questo caso, passo come parametro il valore numerico 100 (100 celle per l'esercizio base)
     - All'interno del ciclo for con k < 100 come condizione di uscita
         - Al click del quadrato
-            - ? SE l'array delle bombe include la cella clickata
-                - => aggiungo all'elemento clickato la classe "clicked-red"
+            - ? SE la variabile flag è su true
+                - ? SE l'array delle bombe include la cella clickata
+                    - => aggiungo all'elemento clickato la classe "clicked-red"
+                    - chiamo la funzione di Game Over
+                    - Stampo "Hai pestato una bomba"
+                - : ALTRIMENTI
+                    - => aggiungo all'elemento clickato la classe "clicked-azure"
+                    - Stampo su console "Hai clickato su " + (numero cella)
             - : ALTRIMENTI
-                - => aggiungo all'elemento clickato la classe "clicked-azure"
+                - Stampo su copnsole "Il gioco non è attivo. Ricomincia da capo"
