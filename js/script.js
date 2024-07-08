@@ -48,7 +48,10 @@ function gameOver() {
 function revealBombs () {
     let squares = document.querySelectorAll(".square")
     for(let k = 0; k < squares.length; k++) {
-        
+        if (bombsArr.includes(k)) {
+            let squareVisible = squares[k]
+            squareVisible.classList.add("clicked-red")
+        }
     }
 }
 

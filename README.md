@@ -58,8 +58,9 @@ Quando si clicca su una bomba e finisce la partita, il software scopre tutte le 
     - Istruzioni:
         - Recupero tutti i div creati restituendoli in una nodelist
         - Creo un ciclo per iterare le bombe contenute nell'array percorrendo il numero totale dei div.square
-            - ? SE al numero dei div corrisponde una bomba
-                - => rendila visibile aggiungendo il colore rosso
+            - ? SE all'indice del div corrisponde una bomba
+                - => Crea una variabile che salvi quella posizione
+                - => Rendila visibile aggiungendo la classe .clicked-red
 - Creo una funzione per il Game Over // SUPERBONUS 1
     - Istruzioni:
         - Imposto la flag su false: il gioco non è più interattivo
