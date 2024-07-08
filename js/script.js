@@ -6,6 +6,10 @@ const btn = document.getElementById("play")
 const BOMBS = 16
 function bombsGenerator(cells) {
     let bombsArr = []
+    while(bombsArr.length < BOMBS) {
+        let random = Math.floor(Math.random() * cells) + 1;
+    }
+
 }
 
 // click event on btn
