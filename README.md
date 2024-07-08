@@ -41,8 +41,14 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
         - Richiamo la variabile globale (bombsArr) e la svuoto a ogni nuovo ciclo
         - Ciclo l'array finché non contiene lo stesso numero presente in BOMBS
             - Prendo un numero randomico da 1 al numero delle celle e lo salvo nella variabile "random"
-            - ? il numero random non è già incluso nell'array
+            - ? SE il numero random non è già incluso nell'array
                 - => inserisco il numero random nell'array
         - Stampo in console l'array per controllare quali celle presenteranno la bomba
 - All'inizio della funzione newGame() creata nel primo progetto
     - Invoco la funzione bombsGenerator e, in questo caso, passo come parametro il valore numerico 100 (100 celle per l'esercizio base)
+    - All'interno del ciclo for con k < 100 come condizione di uscita
+        - Al click del quadrato
+            - ? SE l'array delle bombe include la cella clickata
+                - => aggiungo all'elemento clickato la classe "clicked-red"
+            - : ALTRIMENTI
+                - => aggiungo all'elemento clickato la classe "clicked-azure"
