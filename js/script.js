@@ -12,7 +12,8 @@ function bombsGenerator(cells) {
             bombsArr.push(random)
         }
     }
-
+    // check array on console
+    console.log(bombsArr)
 }
 
 // click event on btn
@@ -27,6 +28,7 @@ function createDivSquare() {
 
 function newGame() {
     grid.innerHTML = ""
+    bombsGenerator(100) //function called
     let square;
     for (let k = 0; k < 100; k++) {
         square = createDivSquare();
