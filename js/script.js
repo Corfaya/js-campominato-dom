@@ -96,6 +96,9 @@ function newGame() {
           score++;
           points.innerHTML = "Punteggio: " + score;
           console.log("Hai clickato su " + (k + 1));
+          if (score == squareLength - BOMBS) {
+            console.log("YOU WIN")
+          }
         }
       } else {
         console.log("Non puoi fare click sulla stessa cella.");
