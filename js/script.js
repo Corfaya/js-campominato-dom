@@ -11,8 +11,6 @@ let gameOn = true;
 let bombsArr = [];
 // score variable
 let score = 0;
-// Points
-points.innerHTML += score
 
 // click event on btn
 btn.addEventListener("click", newGame);
@@ -48,6 +46,7 @@ function gameOver() {
 function newGame() {
   gameOn = true;
   score = 0;
+  points.innerHTML += `: ${score}`
   grid.innerHTML = "";
   bombsGenerator(100); //function called
   let square;

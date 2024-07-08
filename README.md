@@ -36,7 +36,6 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
 # Flow (new)
 .........
 - Recupero dal DOM l'elemento h3.score
-- (TEST) Inserisco accanto alla scritta "Punteggio: " la stringa "00000"
 - Creo una costante BOMBS e le assegno il valore numerico 16
 - Creo una variabile flag impostata su true: il gioco è interattivo
 - Dichiaro un array vuoto (bombsArr)
@@ -57,6 +56,7 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
 - All'inizio della funzione newGame() creata nel primo progetto
     - Inizializzo la variabile flag su true a ogni inizio partita
     - Imposto il punteggio a 0
+    - Aggiungo come base per ogni start la variabile "score" all'h3.score
     - ...........
     - Invoco la funzione bombsGenerator e, in questo caso, passo come parametro il valore numerico 100 (100 celle per l'esercizio base)
     - All'interno del ciclo for con k < 100 come condizione di uscita
