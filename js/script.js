@@ -1,3 +1,10 @@
+// elements recovery
+const grid = document.getElementById("grid")
+const btn = document.getElementById("play")
+
+// click event on btn
+btn.addEventListener("click", newGame)
+
 // Function
 function createDivSquare() {
     let currentElement = document.createElement("div")
@@ -18,10 +25,3 @@ function newGame() {
         grid.append(square)
     }
 }
-
-// elements recovery
-const grid = document.getElementById("grid")
-const btn = document.getElementById("play")
-
-// click event on btn
-btn.addEventListener("click", newGame)

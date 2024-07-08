@@ -1,20 +1,20 @@
-# TRACCIA BONUS
+# TRACCIA BONUS (old)
 Aggiungere una select accanto al bottone di generazione, che fornisca una scelta tra tre diversi livelli di difficoltà:
 - con difficoltà 1 => 100 caselle, con un numero compreso tra 1 e 100, divise in 10 caselle per 10 righe;
 - con difficoltà 2 => 81 caselle, con un numero compreso tra 1 e 81, divise in 9 caselle per 9 righe;
 - con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 
-# Flow BONUS
+# Flow BONUS (old)
+- Recupero dal DOM l'elemento entro cui creare gli altri elementi e lo salvo in una costante
+- Recupero dal DOM il button a cui voglio aggiungere il click event tramite id e lo salvo in una costante
+- (NEW) Recupero dal DOM il select in cui scegliere il livello di difficoltà
 - Dichiaro una funzione nominata con ritorno e (NEW) con parametro per la difficoltà
     - Istruzioni:
         - Crea un elemento HTML (createElement() method) e lo salvo in una variabile
         - Aggiungo le classi necessarie all'elemento (NEW: passo anche il parametro)
         - Restituisco l'elemento HTML
-- Recupero dal DOM l'elemento entro cui creare gli altri elementi e lo salvo in una costante
-- Recupero dal DOM il button a cui voglio aggiungere il click event tramite id e lo salvo in una costante
-- (NEW) Recupero dal DOM il select in cui scegliere il livello di difficoltà
-- Aggiungo l'evento click al bottone
-    - Nella callback function:
+- Dichiaro una funzione "newGame()" senza parametri e senza ritorno
+    - Istruzioni:
         - Svuoto la griglia
         - Dichiaro una variabile "square" per i quadrati
         - (NEW) Dichiaro 3 variabili: levelSelection per recuperare il valore dell'option; squareLength per recuperare la misura del totale dei quadrati; squareClass per aggiungere al div una classe recuperata dal CSS in base al livello
@@ -36,3 +36,14 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
                     - Stampo su console "Hai cliccato su " + (indice + 1)
             - Aggiungo del testo a ogni elemento creato
             - Aggiungo in coda l'elemento creato all'interno del contenitore recuperato dal DOM
+
+- Aggiungo l'evento click al bottone e invoco la funzione newGame
+
+# TRACCIA SUPERBONUS (new)
+## 1
+Quando si clicca su una bomba e finisce la partita, evitare che si possa cliccare su altre celle.
+
+## 2
+Quando si clicca su una bomba e finisce la partita, il software scopre tutte le bombe nascoste
+
+# Flow SUPERBONUS (new)
