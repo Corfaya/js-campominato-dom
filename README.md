@@ -35,9 +35,10 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
 
 # Flow (new)
 - Creo una costante BOMBS e le assegno il valore numerico 16
+- Dichiaro un array vuoto (bombsArr)
 - Creo una funzione "bombsGenerator" con parametro "cells" (numero di celle)
     - Istruzioni:
-        - Dichiaro un array vuoto (bombsArr)
+        - Richiamo la variabile globale (bombsArr) e la svuoto a ogni nuovo ciclo
         - Ciclo l'array finché non contiene lo stesso numero presente in BOMBS
             - Prendo un numero randomico da 1 al numero delle celle e lo salvo nella variabile "random"
             - ? il numero random non è già incluso nell'array

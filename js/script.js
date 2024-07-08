@@ -4,8 +4,9 @@ const btn = document.getElementById("play")
 
 // number of bombs and bombs generator function
 const BOMBS = 16
+let bombsArr = []
 function bombsGenerator(cells) {
-    let bombsArr = []
+    bombsArr = [] // array reset
     while(bombsArr.length < BOMBS) {
         let random = Math.floor(Math.random() * cells) + 1;
         if(!bombsArr.includes(random)){
@@ -33,6 +34,7 @@ function newGame() {
     for (let k = 0; k < 100; k++) {
         square = createDivSquare();
         square.addEventListener("click", function() {
+            if ((k+1) === arrBombs)
             this.classList.add("clicked-azure")
             console.log("Hai clickato su " + (k + 1))
         })
