@@ -45,14 +45,14 @@ function gameOver() {
 }
 
 // reveal all bombs function
-function revealBombs () {
-    let squares = document.querySelectorAll(".square")
-    for(let k = 0; k < squares.length; k++) {
-        if (bombsArr.includes(k)) {
-            let squareVisible = squares[k]
-            squareVisible.classList.add("clicked-red")
-        }
+function revealBombs() {
+  let squares = document.querySelectorAll(".square");
+  for (let k = 0; k < squares.length; k++) {
+    if (bombsArr.includes(k)) {
+      let squareVisible = squares[k-1];
+      squareVisible.classList.add("clicked-red");
     }
+  }
 }
 
 // new game function
@@ -65,22 +65,26 @@ function newGame() {
   let squareLength;
   let squareClass;
   if (levelSelection == 1) {
-    squareLength = 100
-    squareClass = "easy-squares"
-} else if (levelSelection == 2) {
-    squareLength = 81
-    squareClass = "medium-squares"
-} else if (levelSelection == 3) {
-    squareLength = 49
-    squareClass = "hard-squares"
-}
+    squareLength = 100;
+    squareClass = "easy-squares";
+  } else if (levelSelection == 2) {
+    squareLength = 81;
+    squareClass = "medium-squares";
+  } else if (levelSelection == 3) {
+    squareLength = 49;
+    squareClass = "hard-squares";
+  }
   bombsGenerator(squareLength);
   let square;
   for (let k = 0; k < squareLength; k++) {
     square = createDivSquare(squareClass);
     square.addEventListener("click", function () {
       // if gameOn is true and the cell is not clicked
-      if (gameOn && !this.classList.contains("clicked-azure") && !this.classList.contains("clicked-red")) {
+      if (
+        gameOn &&
+        !this.classList.contains("clicked-azure") &&
+        !this.classList.contains("clicked-red")
+      ) {
         // if it's a bomb
         if (bombsArr.includes(k + 1)) {
           this.classList.add("clicked-red");
@@ -88,7 +92,7 @@ function newGame() {
           points.innerHTML = "Punteggio: " + score;
           console.log("Hai pestato una bomba. Ricomincia");
         } else {
-            this.classList.add("clicked-azure");
+          this.classList.add("clicked-azure");
           score++;
           points.innerHTML = "Punteggio: " + score;
           console.log("Hai clickato su " + (k + 1));
@@ -101,4 +105,3 @@ function newGame() {
     grid.append(square);
   }
 }
-
